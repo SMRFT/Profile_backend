@@ -14,7 +14,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-lrbwaxez&q_!zk!xed7-*cx1d1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['103.205.141.149', 'node221456-env-5683222.in1.cloudlets.co.in', 'env-5683222.in1.cloudlets.co.in', '127.0.0.1', 'test.shinova.in']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
