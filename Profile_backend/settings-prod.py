@@ -62,7 +62,7 @@ MIDDLEWARE = [
         'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'diagnostics.urls'
+ROOT_URLCONF = 'Profile_backend.urls'
 
 TEMPLATES = [
     {
@@ -80,8 +80,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'diagnostics.wsgi.application'
-FRONTEND_URL="http://127.0.0.1:8000/_b_a_c_k_e_n_d/Profile/"
+WSGI_APPLICATION = 'Profile_backend.wsgi.application'
+FRONTEND_URL="_b_a_c_k_e_n_d/Profile/"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
