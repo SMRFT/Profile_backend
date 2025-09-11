@@ -65,7 +65,7 @@ MIDDLEWARE = [
 ]
 
 # URL configuration
-ROOT_URLCONF = 'diagnostics.urls'
+ROOT_URLCONF = 'Profile_backend.urls'
 
 TEMPLATES = [
     {
@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'diagnostics.wsgi.application'
+WSGI_APPLICATION = 'Profile_backend.wsgi.application'
 
 
 # Database
