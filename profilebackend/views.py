@@ -8,6 +8,7 @@ from bson import ObjectId
 import gridfs
 from django.contrib.auth.hashers import check_password, make_password
 from dotenv import load_dotenv
+from django.utils.http import urlencode
 
 load_dotenv()
 
@@ -69,10 +70,12 @@ def get_employee_profile(request):
                 role_names.append(role.get("role_name"))
         profile["additionalRoles"] = role_names
 
-    # Profile Image
     if "profileImage" in profile:
         file_id = profile["profileImage"]
-        profile["profileImageUrl"] = f"_b_a_c_k_e_n_d/Profile/file/{file_id}/"
+        scheme = "https" if request.is_secure() else "http"
+        host = request.get_host()
+        file_url = f"{scheme}://{host}/_b_a_c_k_e_n_d/profile/file/{file_id}/"
+        profile["profileImageUrl"] = file_url
         del profile["profileImage"]
 
     return JsonResponse(profile, status=status.HTTP_200_OK, safe=False)
