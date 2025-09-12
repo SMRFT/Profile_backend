@@ -74,7 +74,7 @@ def get_employee_profile(request):
         file_id = profile["profileImage"]
         scheme = "https" if request.is_secure() else "http"
         host = request.get_host()
-        file_url = f"{scheme}://{host}/_b_a_c_k_e_n_d/profile/file/{file_id}/"
+        file_url = f"{scheme}://{host}/_b_a_c_k_e_n_d/Profile/file/{file_id}/"
         profile["profileImageUrl"] = file_url
         del profile["profileImage"]
 
