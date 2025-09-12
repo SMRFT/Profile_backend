@@ -72,7 +72,7 @@ def get_employee_profile(request):
     # Profile Image
     if "profileImage" in profile:
         file_id = profile["profileImage"]
-        profile["profileImageUrl"] = f"http://127.0.0.1:8000/_b_a_c_k_e_n_d/profile/file/{file_id}/"
+        profile["profileImageUrl"] = f"_b_a_c_k_e_n_d/profile/file/{file_id}/"
         del profile["profileImage"]
 
     return JsonResponse(profile, status=status.HTTP_200_OK, safe=False)
